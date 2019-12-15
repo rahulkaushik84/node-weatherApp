@@ -23,10 +23,13 @@ const forecast = (latitude, longitude , callback) => {
     }
     else{
         const cur = respbody.currently
+        const daily = respbody.daily
         callback (undefined, {
             temprature : cur.temperature,
             rainProbability : cur.precipProbability,
             currentSummary : cur.summary,
+            maxTemp : daily.data[0].temperatureHigh,
+            minTemp : daily.data[0].temperatureLow
         })
     }
 

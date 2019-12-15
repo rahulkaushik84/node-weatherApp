@@ -67,7 +67,9 @@ app.get('/weather', (req,res) =>{
                 city : geocodeData.reflocation,
                 temp : forcasteData.temprature,
                 rain : forcasteData.rainProbability,
-                forecast : forcasteData.currentSummary
+                forecast : forcasteData.currentSummary,
+                minTemp : forcasteData.minTemp,
+                maxTemp : forcasteData.maxTemp
             })
 
         })

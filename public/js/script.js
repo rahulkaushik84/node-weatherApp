@@ -29,7 +29,7 @@ weatherForm.addEventListener('submit', (e) =>{
             messageOne.textContent = "Temprature  :  "+jsonData.temp
             messagetwo.textContent = "Chances of rain  :  " +jsonData.rain
             messagethree.textContent = "City  :  "+jsonData.city
-            messagefour.textContent = "forecaste  :  "+jsonData.forecast
+            messagefour.textContent = "forecast  :  "+jsonData.forecast + " with Maximum Temprature : " +jsonData.maxTemp + " and Minimum Temprature : " +jsonData.minTemp 
         }
 
     })
