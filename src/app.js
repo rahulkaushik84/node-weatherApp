@@ -14,6 +14,8 @@ const publicDir = path.join(__dirname,'..','public')
 const viewsDir = path.join(__dirname, '../templates/views')
 const paritalDir = path.join(__dirname,'../templates/partials')
 
+const aboutMessage = "This App is created by Rahul Kaushik. This App used mapbox and darksky API to get weather details of a locations. This uses Node JS"
+
 // set value in express  
 app.set('view engine', 'hbs')
 app.set('views',viewsDir)
@@ -28,7 +30,7 @@ app.get('' , (req,res) => {
 
 
 app.get('/about',(req,res) =>{
-    res.render('about',{title: 'about',name:'rahul', message : 'This web app provide waether details of a location'})
+    res.render('about',{title: 'about',name:'rahul', message : aboutMessage})
 })
 
 app.get('/help',(req,res) =>{
